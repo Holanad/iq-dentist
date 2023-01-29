@@ -1,0 +1,110 @@
+@import '_vars.scss';
+// FLEX
+.flex {
+    display: flex;
+}
+.f-jcsb {
+    display: flex;
+    justify-content: space-between;
+}
+.f-center {
+    display: flex;
+    align-items: center;
+}
+.f-jcsb-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.f-center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.f-dc{
+    display: flex;
+    flex-direction: column;
+}
+.f-dc-jcsb{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.f-dc-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.f-dc-center-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+// IMAGE
+.img-cover{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+}
+
+.img-contain{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    pointer-events: none;
+}
+
+// BTN
+.btn {
+    padding: 11px 30px;
+    background: linear-gradient(92.53deg, #75ADE0 0%, #3D8DD7 100%);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-family: 'Ubuntu Medium';
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    &::after {
+        content: "";
+        width: 100%;
+        height: 200%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.5;
+        filter: blur;
+        background: linear-gradient(to left, transparent 0%, #fff 40%, #fff 60%, transparent 100%);
+        transform: translate(-100%, -25%) rotate(10deg);
+        opacity: 0.5;
+        transition: $anim-default;
+    }
+    &:hover {
+        &::after {
+            animation: glare 3s;
+        }
+    }
+}
+//TITLE
+.title{
+    font-family: 'Ubuntu Bold';
+    font-size: 35px;
+    line-height: 40px;
+    text-align: center;
+    color: #32B452;
+}
+.form {
+    &-elem {
+        &__input {
+            width: 100%;
+            padding: 11px 12px;
+            border-radius: 10px;
+            background: #FFFFFF;
+        }
+    }
+}
